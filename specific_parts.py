@@ -61,10 +61,10 @@ for (i,rect) in enumerate(rects):
         for (x,y) in shape[i:j]:
             cv2.circle(clone,(x,y),1,(0,255,255),-1)
             (x,y,w,h) = cv2.boundingRect(np.array([shape[i:j]]))
-            roi = image[y:y+h,x:x+w]
-            cv2.imshow("Roi",roi)
-            cv2.imshow("Image",clone)
-            cv2.waitKey(0)
+        roi = image[y:y + h, x:x + w]
+        cv2.imshow("Roi", roi)
+        cv2.imshow("Image", clone)
+        cv2.waitKey(0)
     output = visualize_facial_landmarks(image,shape)
     cv2.imshow("Image Final", output)
     cv2.waitKey(0)
