@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14cebfd2-059d-4c0b-a269-61ef59f75cfa" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Eyebrows_Detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/specific_parts.py" beforeDir="false" afterPath="$PROJECT_DIR$/specific_parts.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specific_parts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="specific_parts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/specific_parts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#373#474#0" />
@@ -64,6 +66,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Eyebrows_Detection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Eyebrows_Detection.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="haarcascade_eye_tree_eyeglasses.xml" pinned="false" current-in-tab="false">
@@ -99,6 +106,7 @@
         <option value="$PROJECT_DIR$/FL_video.py" />
         <option value="$PROJECT_DIR$/Facial_Landmarks.py" />
         <option value="$PROJECT_DIR$/specific_parts.py" />
+        <option value="$PROJECT_DIR$/Eyebrows Detection.py" />
       </list>
     </option>
   </component>
@@ -225,10 +233,10 @@
     <frame x="291" y="1080" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49331552" visible="true" weight="0.1390625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49331552" visible="true" weight="0.1390625" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3957219" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3957219" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.5066845" side_tool="true" weight="0.375" />
@@ -408,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/specific_parts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#373#474#0" />
@@ -418,6 +426,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eyebrows_Detection.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
