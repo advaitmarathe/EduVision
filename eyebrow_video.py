@@ -49,29 +49,34 @@ def visualize_facial_landmarks(image, shape, colors=None, alpha=0.75):
                   (163, 38, 32), (180, 42, 220)]
 
 
+cap = cv2.VideoCapture(0)
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(pp)
-image = cv2.imread("face1.jpg")
-image = imutils.resize(image, width=500)
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-cv2.imshow("Example", gray)
-cv2.waitKey()
-rects = detector(gray, 1)
-for (i, rect) in enumerate(rects):
-    shape = predictor(gray, rect)
-    shape = shape_to_np(shape)
-    (x, y, w, h) = rect_to_box(rect)
-    cv2.rectangle(image, (x, y), (w, h), (0, 255, 0), 2)
-    for (name, (i, j)) in eyebrows.items():
-        clone = image.copy()
-        cv2.putText(clone, name, (10, 40), cv2.FONT_HERSHEY_PLAIN, 0.7, (0, 0, 255), 2)
-        for (x, y) in shape[i:j]:
-            cv2.circle(image, (x, y), 1, (0, 255, 255), -1)
-            (x, y, w, h) = cv2.boundingRect(np.array([shape[i:j]]))
-        #roi = image[y:y + h, x:x + w]
-        #cv2.imshow(name, roi)
-cv2.imshow("Image", image)
-cv2.waitKey(0)
+while True:
+    ret, image = cap.read()
+    image = imutils.resize(image, width=500)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # cv2.imshow("Example", gray)
+    # cv2.waitKey()
+    rects = detector(gray, 1)
+    for (i, rect) in enumerate(rects):
+        shape = predictor(gray, rect)
+        shape = shape_to_np(shape)
+        (x, y, w, h) = rect_to_box(rect)
+        cv2.rectangle(image, (x, y), (w, h), (0, 255, 0), 2)
+        for (name, (i, j)) in eyebrows.items():
+            # clone = image.copy()
+            # cv2.putText(clone, name, (10, 40), cv2.FONT_HERSHEY_PLAIN, 0.7, (0, 0, 255), 2)
+            for (x, y) in shape[i:j]:
+                cv2.circle(image, (x, y), 1, (0, 255, 255), -1)
+                (x, y, w, h) = cv2.boundingRect(np.array([shape[i:j]]))
+            #roi = image[y:y + h, x:x + w]
+            #cv2.imshow(name, roi)
+    cv2.imshow("Image", image)
+    x = cv2.waitKey(10)
+    userChar = chr(x & 0xFF)
+    if userChar == 'q':
+        break
 # output = visualize_facial_landmarks(image, shape)
 # cv2.imshow("Image Final", output)
 # cv2.waitKey(0)
